@@ -52,7 +52,7 @@ class BlogResource extends Resource
                 Group::make()->schema([
                     TextInput::make('name')->label('Title')->unique(ignoreRecord: true)->required(),
                     RichEditor::make('post')->rule('min:120')->label('Title'),
- FileUpload::make('image')->disk('public')->directory('thumbnails')->imageEditor(),
+ FileUpload::make('image')->disk('public')->directory('post')->imageEditor(),
                 ]),
                 
                 Group::make()->schema([
